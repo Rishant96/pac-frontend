@@ -6,7 +6,7 @@ import { Provider, createClient } from "urql";
 import './index.css';
 
 const client = createClient({
-  url: "http://localhost:4000/graphql"
+  url: "https://scarlet-brainy-heliotrope.glitch.me/graphql"
 })
 
 ReactDOM.render(

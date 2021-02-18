@@ -15,7 +15,7 @@ export const QRorLink: QRorLinkComponent = ({ children, ...restProps }) => {
 };
 
 QRorLink.Link = ({ secret, ...restProps }) => (
-  <Link to={`${ROUTES.FORM}/${secret}`}>{`http://localhost:3000${ROUTES.FORM}/${secret}`}</Link>
+  <Link to={`${ROUTES.FORM}/${secret}`}>{`${window.location.href}${ROUTES.FORM}/${secret}`}</Link>
 );
 
 QRorLink.QRCode = ({ secret, ...restProps }) => {

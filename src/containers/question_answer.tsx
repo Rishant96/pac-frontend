@@ -1,4 +1,3 @@
-import { Console } from "console";
 import { FormEvent, useEffect, useState } from "react";
 import { useQuery } from "urql";
 import { QAForm } from "../components";
@@ -67,7 +66,7 @@ export const QuestionAnswer: React.FC<any> = ({
   });
 
   useEffect(() => {
-    const { data, fetching, error } = nextQuestion;
+    const { data, fetching } = nextQuestion;
 
     if (!fetching) {
       setQuestion(data.question.display);
@@ -79,7 +78,7 @@ export const QuestionAnswer: React.FC<any> = ({
 
   useEffect(() => {
     if (checkBranch) {
-      const { data, fetching, error } = branch;
+      const { data, fetching } = branch;
 
       if (!fetching && data.branch !== null) {
         setBranchInfo({
@@ -108,7 +107,7 @@ export const QuestionAnswer: React.FC<any> = ({
         }
       }
     }
-  }, [branch, ansSelected, checkBranch, branchInfo]);
+  }, [branch, ansSelected, checkBranch, branchInfo, hasBranch, nextQId]);
 
   return (
     <>
@@ -120,7 +119,7 @@ export const QuestionAnswer: React.FC<any> = ({
           <QAForm.AnswerField>
             <span></span>
             <QAForm.Input
-              value={ansSelected.value}
+              value={ansSelected.value === -1 ? "" : ansSelected.value}
               onChange={(e: FormEvent<HTMLInputElement>) => {
                 setAnsSelected({
                   id: answers[0].id,
@@ -151,6 +150,7 @@ export const QuestionAnswer: React.FC<any> = ({
             ? handleSubmit(e)
             : handleNext(e, q_id, ansSelected.value, nextQId);
           setAnsSelected({ id: 0, value: -1 });
+          setBtnText("...");
         }}
       >
         {btnText}

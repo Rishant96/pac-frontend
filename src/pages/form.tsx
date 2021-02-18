@@ -97,7 +97,7 @@ export const Form: React.FC = () => {
   });
 
   useEffect(() => {
-    const { data, fetching, error } = secretResult;
+    const { data, fetching, } = secretResult;
 
     if (!fetching) {
       setSurgeonInfo(data.surgeonSecret);
@@ -105,7 +105,7 @@ export const Form: React.FC = () => {
   }, [secretResult]);
 
   useEffect(() => {
-    const { data, fetching, error } = formResult;
+    const { data, fetching, } = formResult;
 
     if (!fetching) {
       setFormInfo({
