@@ -10,6 +10,10 @@ export const Title = styled.h1`
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
+  @media (max-width: 625px) {
+    width: 80%;
+  }
 `;
 
 export const Base = styled.form`
@@ -18,6 +22,10 @@ export const Base = styled.form`
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+
+  @media (max-width: 625px) {
+    width: 80%;
+  }
 `;
 
 export const Input = styled.input`
