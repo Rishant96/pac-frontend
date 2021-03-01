@@ -30,4 +30,9 @@ export const Content = styled.div`
   margin-top: 70px;
   margin-left: 10%;
   margin-right: 10%;
+
+  @media (max-width: 720px) {
+    margin-left: 0;
+    margin-right: 0;
+  }
 `;

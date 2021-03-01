@@ -3,6 +3,11 @@ import styled from "styled-components/macro";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 720px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
 `;
 
 export const Title = styled.h2`
@@ -15,7 +20,10 @@ export const Base = styled.form`
   flex-direction: column;
   margin-left: auto;
   margin-right: auto;
-  min-width: 500px;
+
+  @media (min-width: 720px) {
+    min-width: 500px;
+  }
 `;
 
 export const Question = styled.div``;

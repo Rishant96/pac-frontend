@@ -12,7 +12,7 @@ export const Title = styled.h1`
   width: 50%;
 
   @media (max-width: 625px) {
-    width: 80%;
+    width: 67%;
   }
 `;
 
@@ -24,7 +24,7 @@ export const Base = styled.form`
   width: 50%;
 
   @media (max-width: 625px) {
-    width: 80%;
+    width: 67%;
   }
 `;
 
@@ -33,8 +33,12 @@ export const Input = styled.input`
   padding: 5px 10px;
   outline: none;
   margin-bottom: 15px;
+  border: none;
+  border-width: 0px;
+  border: 1px lightgray solid;
 
   &:focus {
+    border-width: 2px;
     border-color: black;
   }
 `;
