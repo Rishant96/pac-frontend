@@ -85,8 +85,12 @@ export const Input = styled.input`
   margin: 0;
   margin-top: 5px;
   margin-bottom: 5px;
+  border: none;
+  border-width: 0px;
+  border: 1px lightgray solid;
 
   &:focus {
+    border-width: 2px;
     border-color: black;
   }
 `;

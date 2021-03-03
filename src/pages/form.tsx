@@ -80,6 +80,9 @@ export const Form: React.FC = () => {
   ) => {
     e.preventDefault();
     console.log(questionNums, quesAns);
+    
+    // Submit response
+
     alert("Form submitted");
     // eslint-disable-next-line no-restricted-globals
     location.reload();
